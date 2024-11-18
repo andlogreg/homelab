@@ -1,0 +1,27 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+		"minikube": "none"
+	  }
+    },
+  "containerEnv": {
+		"KUBECONFIG": "/workspaces/homelab/.kubeconfig.yaml"
+	},
+	"postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+    "customizations": {
+		"vscode": {
+		  "settings": {
+                "extensions.verifySignature": false
+            },
+          "extensions": [
+			"letmaik.git-tree-compare",
+			"oderwat.indent-rainbow",
+			"ryu1kn.partial-diff",
+            "huntertran.auto-markdown-toc",
+            "mhutchie.git-graph",
+			"ms-kubernetes-tools.vscode-kubernetes-tools"
+		  ]
+		}
+	  }
+  }
