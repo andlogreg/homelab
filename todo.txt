@@ -1,2 +1,3 @@
 - linter
 - auto reloader configmap
+- pin images versions
